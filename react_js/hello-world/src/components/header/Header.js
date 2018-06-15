@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 // Assets
 import logo from '../../assets/img/logo.svg';
 import '../App.css';
+import './header.css';
 
 class Header extends Component {
     
@@ -21,6 +22,10 @@ class Header extends Component {
                 <header className="App-header">
                 <img src={logo} className="App-logo" alt="logo" />
                 <h1 className="App-title">{title}</h1>
+
+                <ul className="menu">
+                    {items && items.map((item, key) => <li key="{key}">{item.title}</li>)}
+                </ul>
                 </header>
             </div>
         );
