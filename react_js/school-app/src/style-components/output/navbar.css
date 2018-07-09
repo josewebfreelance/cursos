@@ -1,12 +1,3 @@
-.nav-bar {
-  margin: 5px;
-}
-.nav-bar.vertical-content {
-  position: relative;
-}
-.nav-bar.horizontal-content {
-  position: relative;
-}
 .nav-bar ul {
   margin: 0;
   padding: 0;
@@ -31,6 +22,14 @@
 }
 .nav-bar ul li:not(:last-child) {
   margin-right: 16px;
+}
+.nav-bar.horizontal-content {
+  min-width: 250px;
+  vertical-align: top;
+}
+.nav-bar.horizontal-content ul li {
+  display: block;
+  text-align: left;
 }
 
 /*# sourceMappingURL=navbar.css.map */

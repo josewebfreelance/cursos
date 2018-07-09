@@ -1,16 +1,6 @@
 @import './variables';
 
 .nav-bar {
-    margin: 5px;
-
-    &.vertical-content {
-        position: relative;
-    }
-
-    &.horizontal-content {
-        position: relative;
-    }
-
     ul {
         margin: 0;
         padding: 0;
@@ -34,12 +24,35 @@
             cursor: pointer;
 
             &:hover {
-                background-color: $btn-nav-bar;
+                background-color: map-get($nav-bar-config, btn-bg);
             }
 
             &:not(:last-child) {            
                 margin-right: 16px;
             }
         }
+    }
+
+    &.vertical-content {
+        ul {
+            li {
+            }
+        }
+    }
+
+    &.horizontal-content {
+        min-width: #{map-get($nav-bar-config, horizontal-content-w)}px;
+        vertical-align: top;
+
+        ul {
+            li {
+                display: block;
+                text-align: left;
+            }
+        }
+    }
+
+    .nav-bar-side {
+        background-color: #{map-get($blue-gray, 900)};
     }
 }

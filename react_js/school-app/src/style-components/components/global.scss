@@ -1,6 +1,9 @@
+@import "./variables";
+
 .horizontal-content {
     position: relative;
     display: inline-block;
+    height: #{map-get($nav-bar-config, horizontal-content-h)}vh;
 }
 
 .vertical-content {

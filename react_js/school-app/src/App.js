@@ -8,10 +8,10 @@ const users = {
   user: 'José'
 }
 
-const items = [
-  {menu: 'Inicio'},
-  {menu: 'Nosotros'}
-]
+const itemsSide = [
+  {menu: 'Dashboard'},
+  {menu: ''}
+];
 
 const positionContent = 'horizontal'
 
@@ -19,7 +19,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <NavBar items={items} align={'right'} positionContent={positionContent}/>
+        <NavBar items={itemsSide} positionContent={positionContent} nameClass={' nav-bar-side'}/>
         <Content positionContent={positionContent}/>
       </div>
     );

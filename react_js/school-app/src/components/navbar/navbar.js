@@ -8,11 +8,12 @@ class NavBar extends Component {
     static propTypes = {
         items: PropTypes.array.isRequired,
         align: PropTypes.string,
-        positionContent: PropTypes.string
+        positionContent: PropTypes.string,
+        nameClass: PropTypes.string,
     }
 
     render() {
-        const {items, align, positionContent} = this.props;
+        const {items, align, positionContent, nameClass} = this.props;
 
         let classNameAlign = "";
         let classNamePosition = "";
@@ -32,7 +33,7 @@ class NavBar extends Component {
         }
 
         return (
-            <div className={"nav-bar " + (classNamePosition)}>
+            <div className={"nav-bar " + (classNamePosition + nameClass)}>
                 <ul className={classNameAlign}>
                     { items.map((item, key) => 
                     <li key={key}><a>{item.menu}</a></li>

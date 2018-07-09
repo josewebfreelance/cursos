@@ -25,5 +25,8 @@
     transform: rotate(360deg);
   }
 }
+.content.horizontal-content {
+  width: calc(100% - 250px);
+}
 
 /*# sourceMappingURL=content.css.map */

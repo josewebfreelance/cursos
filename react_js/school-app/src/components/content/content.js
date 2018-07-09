@@ -2,7 +2,14 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import logo from '../../logo.svg';
 
+import NavBar from '../navbar/navbar';
+
 import '../../style-components/output/content.css';
+
+const items = [
+    {menu: 'Inicio'},
+    {menu: 'Nosotros'}
+  ];  
 
 class Content extends Component {
     static propTypes = {
@@ -21,6 +28,8 @@ class Content extends Component {
 
         return (
             <div className={'content ' + (classNamePosition)}>
+                <NavBar items={items} align={'right'}/>
+
                 <header className="App-header">
                     <img src={logo} className="App-logo" alt="logo" />
                     <h1 className="App-title">Welcome to React</h1>
