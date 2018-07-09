@@ -1,0 +1,7 @@
+$blue-gray: (
+    50: #ECEFF1,
+    100: #CFD8DC,
+    300: #B0BEC5
+);
+
+$btn-nav-bar: map-get($blue-gray, 50);

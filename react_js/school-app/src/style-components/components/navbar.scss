@@ -1,0 +1,45 @@
+@import './variables';
+
+.nav-bar {
+    margin: 5px;
+
+    &.vertical-content {
+        position: relative;
+    }
+
+    &.horizontal-content {
+        position: relative;
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+
+        &.navbar-right {
+            text-align: right;
+        }
+
+        &.navbar-left {
+            text-align: left;
+        }
+
+        &.navbar-center {
+            text-align: center;
+        }
+
+        li {
+            display: inline-flex;
+            padding: 10px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+
+            &:hover {
+                background-color: $btn-nav-bar;
+            }
+
+            &:not(:last-child) {            
+                margin-right: 16px;
+            }
+        }
+    }
+}

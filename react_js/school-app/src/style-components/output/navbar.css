@@ -1,0 +1,36 @@
+.nav-bar {
+  margin: 5px;
+}
+.nav-bar.vertical-content {
+  position: relative;
+}
+.nav-bar.horizontal-content {
+  position: relative;
+}
+.nav-bar ul {
+  margin: 0;
+  padding: 0;
+}
+.nav-bar ul.navbar-right {
+  text-align: right;
+}
+.nav-bar ul.navbar-left {
+  text-align: left;
+}
+.nav-bar ul.navbar-center {
+  text-align: center;
+}
+.nav-bar ul li {
+  display: inline-flex;
+  padding: 10px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.nav-bar ul li:hover {
+  background-color: #ECEFF1;
+}
+.nav-bar ul li:not(:last-child) {
+  margin-right: 16px;
+}
+
+/*# sourceMappingURL=navbar.css.map */
