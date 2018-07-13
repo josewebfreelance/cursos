@@ -5,14 +5,13 @@ import PropTypes from 'prop-types';
 import NavBar from './navbar/Navbar';
 import Content from './content/Content';
 
+import menus from '../menus';
+
 const users = {
   user: 'José'
 }
 
-const itemsSide = [
-  {menu: 'Dashboard'},
-  {menu: ''}
-];
+const itemsSide = menus;
 
 const positionContent = 'horizontal'
 

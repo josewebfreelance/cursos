@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 import '../../style-components/output/navbar.css';
 
@@ -35,9 +36,11 @@ class NavBar extends Component {
         return (
             <div className={"nav-bar " + (classNamePosition + nameClass)}>
                 <ul className={classNameAlign}>
-                    { items.map((item, key) => 
-                    <li key={key}><a>{item.menu}</a></li>
-                    )}
+                    { 
+                        items.map((item, key) =>
+                            <li key={key}><Link to={`${item.url}`}>{item.menu}</Link></li>
+                        )
+                    }
                 </ul>
             </div>
         );
