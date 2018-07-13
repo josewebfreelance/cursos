@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import logo from '../../logo.svg';
 
-import NavBar from '../navbar/navbar';
+import NavBar from '../navbar/Navbar';
 
 import '../../style-components/output/content.css';
 
@@ -13,10 +13,11 @@ const items = [
 
 class Content extends Component {
     static propTypes = {
-        positionContent: PropTypes.string
+        positionContent: PropTypes.string,
+        body: PropTypes.object.isRequired
     }
     render() {
-        const { positionContent } = this.props;
+        const { positionContent, body } = this.props;
 
         let classNamePosition = "";
 
@@ -29,13 +30,7 @@ class Content extends Component {
         return (
             <div className={'content ' + (classNamePosition)}>
                 <NavBar items={items} align={'right'}/>
-
-                <header className="App-header">
-                    <img src={logo} className="App-logo" alt="logo" />
-                    <h1 className="App-title">Welcome to React</h1>
-                    <label></label>
-                </header>
-                <p className="App-intro">To get started, edit <code>src/App.js</code> and save to reload.</p>
+                <div className="main-content">{body}</div>
             </div>
         );
     }
